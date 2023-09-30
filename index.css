@@ -1,0 +1,128 @@
+:root{
+    --color-bg: aliceblue;
+    --font-dark: black;
+    --header-color:hsl(0,0%,98%);
+}
+
+
+.Darktheme { 
+--color-bg: hsl(200, 6%, 10%);
+--font-dark:hsl(0,0%,98%);
+--header-color:hsl(180, 2%, 11%);
+
+}
+
+*{ 
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body{
+    background-color: var(--color-bg);
+    font-size: 14px;
+    font-family: sans-serif;
+    color: var(--font-dark);
+    transition: all 0.2s linear;
+}
+.filters,
+main{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding:0 32px;
+}
+
+header{
+background-color: var(--header-color);
+margin-bottom: 32px ;
+transition: all 0.2s linear;
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    margin:auto;
+    padding: 32px 0 50px;
+    max-width: 1280px;
+}
+
+header button { 
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#Theme {
+    color:var(--font-dark);
+    transition: .5s ease;
+}
+select {
+    color:var(--font-dark);
+    background-color: var(--color-bg);
+    transition: all 0.2s linear;
+    border: 2px var(--color-bg) solid;
+}
+select:focus {
+    border: none;
+    outline: none;
+}
+.filters{
+    border:none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+#query{
+    background-color: var(--header-color);
+    box-shadow: 0px 0px 10px -5px rgba(66, 68, 90, 1);
+    border: none;
+    padding: 15px 30px;
+    transition: all 0.2s linear;
+}
+
+ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap:70px;
+    list-style: none;
+}
+
+li{
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px -8px rgba(66, 68, 90, 1);
+    overflow: hidden;
+}
+
+li img{
+    aspect-ratio: 160/98;
+    width: 100%;
+}
+
+.info-container{
+    padding:30px 20px;
+}
+
+.country-name {
+display: block;
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    ul {
+        grid-template-columns: 1fr;
+    }
+}
