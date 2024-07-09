@@ -51,5 +51,4 @@ export const renderCountriesList = (countries) => {
     rootElement.innerHTML = "";
     rootElement.appendChild(createlistelement(countries))
     console.log(countries)
-    //render country
 }
